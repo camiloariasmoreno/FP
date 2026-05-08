@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Diagrama de flujo minutos"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-16 09:37:59 p.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTE2OzA5OjMwOjA0IHAu4oCvbS47MTE4OTc="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTE2OzA5OjM3OjU5IHAu4oCvbS47MTsxMjAyMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ValorM, Tiempo, Total" type="Real" array="False" size=""/>
+            <input variable="ValorM"/>
+            <input variable="Tiempo"/>
+            <assign variable="Total" expression="Tiempo*ValorM"/>
+            <output expression="Total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

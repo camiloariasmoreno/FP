@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Trabajo en clase hayar si un numeroes negativo o positivo"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-23 07:34:52 p.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTIzOzA3OjE5OjUyIHAu4oCvbS47MTE5MDM="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTIzOzA3OjM0OjUyIHAu4oCvbS47MTsxMjAwOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N1" type="Integer" array="False" size=""/>
+            <input variable="N1"/>
+            <if expression="N1&gt;0">
+                <then>
+                    <output expression="&quot;Positivo&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="N1=0">
+                        <then>
+                            <output expression="&quot;Cero&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Negativo&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

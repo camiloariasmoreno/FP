@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="diagrmas de flujo"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-09 07:16:29 p.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTA4OzExOjE2OjQwIHAu4oCvbS47MTE4OTU="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTA5OzA3OjE2OjI5IHAu4oCvbS47MzsxMjAxOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N1, N2, N3, N4, sum, Pr" type="Real" array="False" size=""/>
+            <input variable="N1"/>
+            <input variable="N2"/>
+            <input variable="N3"/>
+            <input variable="N4"/>
+            <assign variable="sum" expression="N1+N2+N3+N4"/>
+            <assign variable="Pr" expression="sum / 4"/>
+            <output expression="&quot;la suma es: &quot; &amp; sum" newline="True"/>
+            <output expression="&quot;El promedio es: &quot; &amp; Pr" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

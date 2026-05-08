@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="diagrama de flujo dolar a peso"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-16 07:51:40 p.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTE2OzA3OjIxOjAxIHAu4oCvbS47MTE4OTI="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTE2OzA3OjUxOjQwIHAu4oCvbS47MTsxMjAwNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Totalenpeso, tasacambio, valordolar" type="Real" array="False" size=""/>
+            <input variable="valordolar"/>
+            <input variable="tasacambio"/>
+            <assign variable="Totalenpeso" expression="tasacambio*valordolar"/>
+            <output expression="totalenpeso" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="ESTRELLITA DE MAR"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-09 08:59:35 p.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTA5OzA4OjM4OjExIHAu4oCvbS47MTE5MDQ="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTA5OzA4OjU5OjM1IHAu4oCvbS47MTsxMjAyMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <turn expression="35" rotate="right"/>
+            <forward expression="50" pen="down"/>
+            <turn expression="130" rotate="right"/>
+            <forward expression="50" pen="down"/>
+            <turn expression="50" rotate="left"/>
+            <forward expression="50" pen="down"/>
+            <turn expression="130" rotate="right"/>
+            <forward expression="50" pen="down"/>
+            <turn expression="100" rotate="left"/>
+            <forward expression="50" pen="down"/>
+            <turn expression="220" rotate="left"/>
+            <forward expression="50" pen="down"/>
+            <turn expression="30" rotate="left"/>
+            <forward expression="50" pen="down"/>
+            <turn expression="140" rotate="right"/>
+            <forward expression="50" pen="down"/>
+            <turn expression="110" rotate="left"/>
+            <forward expression="50" pen="down"/>
+            <turn expression="126" rotate="right"/>
+            <forward expression="55" pen="down"/>
+        </body>
+    </function>
+</flowgorithm>

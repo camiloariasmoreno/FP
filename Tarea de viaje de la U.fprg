@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Tarea de viaje de la U"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-27 11:54:06 a.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTI3OzEwOjE4OjQ5IGEu4oCvbS47MTE4OTE="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTI3OzExOjU0OjA2IGEu4oCvbS47MTsxMTk5Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="CanPer, total" type="Real" array="False" size=""/>
+            <input variable="CanPer"/>
+            <if expression="CanPer&gt;=100">
+                <then>
+                    <assign variable="total" expression="CanPer*65000"/>
+                </then>
+                <else>
+                    <if expression="CanPer&gt;=50">
+                        <then>
+                            <assign variable="total" expression="CanPer*70000"/>
+                        </then>
+                        <else>
+                            <if expression="CanPer&gt;=30">
+                                <then>
+                                    <assign variable="total" expression="CanPer*95000"/>
+                                </then>
+                                <else>
+                                    <assign variable="total" expression="8000000"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

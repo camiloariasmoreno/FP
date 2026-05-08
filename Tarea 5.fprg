@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Tarea 5"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-23 06:52:38 p.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTIzOzA2OjMxOjU4IHAu4oCvbS47MTE5MDI="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTIzOzA2OjUyOjM4IHAu4oCvbS47NTsxMjAxNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N1, N2, N3, Mayor" type="Real" array="False" size=""/>
+            <input variable="N1"/>
+            <input variable="N2"/>
+            <input variable="N3"/>
+            <if expression="N1&gt;N2">
+                <then>
+                    <if expression="N1&gt;N3">
+                        <then>
+                            <assign variable="Mayor" expression="N1"/>
+                        </then>
+                        <else>
+                            <assign variable="Mayor" expression="N3"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="N2&gt;N3">
+                        <then>
+                            <assign variable="Mayor" expression="N2"/>
+                        </then>
+                        <else>
+                            <assign variable="Mayor" expression="N3"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="Mayor" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

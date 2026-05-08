@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="DEVUELTAS DE TIENDA"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-09 09:31:40 p.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTA5OzA5OjAzOjA3IHAu4oCvbS47MTE5MDI="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTA5OzA5OjMxOjQwIHAu4oCvbS47MTsxMjAwOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="CT, CB, CD" type="Integer" array="False" size=""/>
+            <input variable="CT"/>
+            <input variable="CB"/>
+            <if expression="CT&gt;CB">
+                <then>
+                    <assign variable="CD" expression="CB-CT"/>
+                </then>
+                <else>
+                    <output expression="&quot;NO ALCANZA&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="cuadros dobles ciclo para"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-30 07:30:09 p.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTMwOzA3OjEyOjQwIHAu4oCvbS47MTE4OTE="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTMwOzA3OjMwOjA5IHAu4oCvbS47MTsxMjAwNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, cant, j" type="Integer" array="False" size=""/>
+            <input variable="cant"/>
+            <for variable="j" start="1" end="cant" direction="inc" step="1">
+                <for variable="i" start="1" end="cant" direction="inc" step="1">
+                    <forward expression="100" pen="down"/>
+                    <turn expression="360/cant" rotate="right"/>
+                </for>
+                <turn expression="360/cant" rotate="right"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

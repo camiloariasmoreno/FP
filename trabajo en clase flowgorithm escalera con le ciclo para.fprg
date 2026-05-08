@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="trabajo en clase flowgorithm escalera con le ciclo para"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-30 07:11:07 p.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTMwOzA2OjUxOjA0IHAu4oCvbS47MTE4OTM="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTMwOzA3OjExOjA3IHAu4oCvbS47MTsxMjAwMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cant, i" type="Integer" array="False" size=""/>
+            <input variable="cant"/>
+            <for variable="i" start="1" end="cant" direction="inc" step="1">
+                <forward expression="100" pen="down"/>
+                <turn expression="90" rotate="right"/>
+                <forward expression="100" pen="down"/>
+                <turn expression="90" rotate="left"/>
+            </for>
+            <turn expression="180" rotate="right"/>
+            <forward expression="cant*100" pen="down"/>
+            <turn expression="270" rotate="left"/>
+            <forward expression="cant*100" pen="down"/>
+        </body>
+    </function>
+</flowgorithm>

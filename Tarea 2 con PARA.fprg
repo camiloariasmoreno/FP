@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Tarea 2 con PARA"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-28 01:11:43 p.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTI4OzEyOjI0OjI3IHAu4oCvbS47MTE5MDI="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTI4OzAxOjExOjQzIHAu4oCvbS47MTsxMjAwMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="S" type="Integer" array="False" size=""/>
+            <for variable="S" start="1" end="20" direction="inc" step="1">
+                <output expression="7&amp;&quot;+&quot;&amp;S&amp;&quot;=&quot;&amp;S+7" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

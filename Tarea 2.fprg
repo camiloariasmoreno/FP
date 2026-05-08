@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Tarea 2"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-23 04:40:48 p.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTIzOzA0OjA4OjQ4IHAu4oCvbS47MTE5MDM="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA0LTIzOzA0OjQwOjQ4IHAu4oCvbS47MTsxMjAwNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Costo, Metrocuadrado, Total" type="Real" array="False" size=""/>
+            <input variable="Costo"/>
+            <input variable="Metrocuadrado"/>
+            <assign variable="Total" expression="Costo*Metrocuadrado"/>
+            <output expression="Total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
