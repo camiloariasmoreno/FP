@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="promedio hacer edades"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-14 07:46:39 p.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA1LTE0OzA3OjAyOjM1IHAu4oCvbS47MTE4OTc="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA1LTE0OzA3OjQ2OjM5IHAu4oCvbS47MTsxMjAxNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, suma, promedio, edad, cantidad" type="Integer" array="False" size=""/>
+            <input variable="cantidad"/>
+            <assign variable="suma" expression="0"/>
+            <assign variable="i" expression="1"/>
+            <do expression="i&lt;=cantidad">
+                <input variable="edad"/>
+                <assign variable="suma" expression="suma+edad"/>
+                <assign variable="i" expression="i+1"/>
+            </do>
+            <assign variable="promedio" expression="suma/cantidad"/>
+            <output expression="promedio" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

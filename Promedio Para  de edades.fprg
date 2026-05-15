@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Promedio Para  de edades"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-14 07:29:47 p.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA1LTE0OzA2OjMzOjE5IHAu4oCvbS47MTE5MDI="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA1LTE0OzA3OjI5OjQ3IHAu4oCvbS47MTsxMjAxNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, edad, promedio, cantidad, suma" type="Integer" array="False" size=""/>
+            <input variable="cantidad"/>
+            <assign variable="suma" expression="0"/>
+            <for variable="i" start="1" end="cantidad" direction="inc" step="1">
+                <comment text="pido la edad"/>
+                <input variable="edad"/>
+                <assign variable="suma" expression="suma+edad"/>
+            </for>
+            <assign variable="promedio" expression="suma/cantidad"/>
+            <output expression="promedio" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
