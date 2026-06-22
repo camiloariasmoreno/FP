@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="metodo de ordenamiento"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-28 08:02:49 p.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA1LTI4OzA3OjIzOjE0IHAu4oCvbS47MTE5MDI="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA1LTI4OzA3OjMxOjQwIHAu4oCvbS47MTtDYW1pbG8gQXJpYXM7TEFQVE9QLVNRUjNSS1MyOzIwMjYtMDUtMjg7MDY6Mzk6MDQgcC7igK9tLjtWZWN0b3Jlcy5mcHJnOzI1MzUz"/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA1LTI4OzA4OjAyOjQ5IHAu4oCvbS47MTsxMjAxNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="v" type="Integer" array="True" size="7"/>
+            <declare name="p, j, temp" type="Integer" array="False" size=""/>
+            <declare name="bandera" type="Boolean" array="False" size=""/>
+            <assign variable="bandera" expression="true"/>
+            <call expression="crearvector(v)"/>
+            <for variable="p" start="1" end="6" direction="inc" step="1">
+                <assign variable="temp" expression="v[p]"/>
+                <assign variable="j" expression="p"/>
+                <while expression="j&gt;0 and temp&lt;v[j-1] and bandera">
+                    <assign variable="v[j]" expression="v[j-1]"/>
+                    <assign variable="j" expression="j-1"/>
+                    <if expression="j=0">
+                        <then>
+                            <assign variable="bandera" expression="false"/>
+                            <assign variable="j" expression="1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </while>
+                <assign variable="v[j]" expression="temp"/>
+                <assign variable="bandera" expression="true"/>
+            </for>
+        </body>
+    </function>
+    <function name="crearvector" type="None" variable="">
+        <parameters>
+            <parameter name="numeros" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="6" direction="inc" step="1">
+                <input variable="numeros[i]"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

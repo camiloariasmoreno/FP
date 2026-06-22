@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Actividad plano cartesiano"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-18 07:48:02 p.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA2LTE4OzA2OjU0OjIwIHAu4oCvbS47MTE5MDI="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA2LTE4OzA3OjQ4OjAyIHAu4oCvbS47MTsxMjAxNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x1, x2, y1, y2, distancia" type="Real" array="False" size=""/>
+            <input variable="x1"/>
+            <input variable="x2"/>
+            <input variable="y1"/>
+            <input variable="y2"/>
+            <assign variable="distancia" expression="sqrt(((x2-x1)^2)+((y2-y1)^2))"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="metodo ordenamiento shell"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-03 12:41:58 a.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA2LTAyOzExOjI1OjE4IHAu4oCvbS47MTE4OTY="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA2LTAzOzEyOjQxOjU4IGEu4oCvbS47MTsxMTk5Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="v" type="Integer" array="True" size="7"/>
+            <declare name="p, j, temp, salto" type="Integer" array="False" size=""/>
+            <call expression="crearvector(v)"/>
+            <assign variable="salto" expression="3"/>
+            <if expression="salto &gt;= 1">
+                <then>
+                    <for variable="p" start="salto" end="6" direction="inc" step="1"/>
+                    <assign variable="j" expression="p - salto"/>
+                    <if expression="j &gt;= 0 &amp;&amp; v[j] &gt; v[j + salto]">
+                        <then>
+                            <assign variable="temp" expression="v[j]"/>
+                            <assign variable="v[j]" expression="v[j+salto]"/>
+                            <assign variable="v[j+salto]" expression="temp"/>
+                            <assign variable="j" expression="j-salto"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="salto" expression="salto/2"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;arreglo ordenado&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="crearvector" type="None" variable="">
+        <parameters>
+            <parameter name="numeros" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="6" direction="inc" step="1">
+                <input variable="numeros[i]"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

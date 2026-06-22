@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Actividad guardar numero"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-18 08:24:30 p.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA2LTE4OzA3OjQ4OjE3IHAu4oCvbS47MTE5MTI="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA2LTE4OzA4OjI0OjMwIHAu4oCvbS47MTsxMjAxMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numerosecreto, numerousuario, intentos" type="Integer" array="False" size=""/>
+            <declare name="adivino" type="Boolean" array="False" size=""/>
+            <assign variable="numerosecreto" expression="random(100)+1"/>
+            <assign variable="intentos" expression="0"/>
+            <assign variable="adivino" expression="false"/>
+            <while expression="intentos&lt;6&amp;&amp;adivino=false">
+                <output expression="&quot;ingrese un numero entre 1 y 100&quot;" newline="True"/>
+                <input variable="numerousuario"/>
+                <assign variable="intentos" expression="intentos+1"/>
+                <if expression="numerousuario=numerosecreto">
+                    <then>
+                        <output expression="&quot;correcto&quot;" newline="True"/>
+                        <assign variable="adivino" expression="true"/>
+                    </then>
+                    <else>
+                        <if expression="numerousuario=numerosecreto">
+                            <then>
+                                <output expression="&quot;el numero es menor&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;el numero es mayor&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <if expression="adivino=false">
+                <then>
+                    <output expression="&quot;perdiste, el numero era&quot;" newline="True"/>
+                    <output expression="numerosecreto" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

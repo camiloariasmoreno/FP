@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ordenamiento Seleccion"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-04 03:32:37 p.&#160;m."/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLVRIM0QySDc7MjAyNi0wNi0wNDswMzoxMjoxOSBwLsKgbS47MzA0Ng=="/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLVRIM0QySDc7MjAyNi0wNi0wNDswMzoxMzoyMyBwLsKgbS47MjtVc2VyO0RFU0tUT1AtVEgzRDJINzsyMDI2LTA2LTA0OzEyOjU1OjQxIHAuwqBtLjtPcmRlbmFtaWVudG8gQnVyYnVqYS5mcHJnOzg3OTQ="/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLVRIM0QySDc7MjAyNi0wNi0wNDswMzozMjozNyBwLsKgbS47MTszMTU2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="I, J, Temp, Tama&#241;o, Posmin" type="Integer" array="False" size=""/>
+            <input variable="Tama&#241;o"/>
+            <declare name="Vector" type="Integer" array="True" size="Tama&#241;o"/>
+            <call expression="CrearVector(Vector, Tama&#241;o)"/>
+            <for variable="I" start="0" end="Tama&#241;o-2" direction="inc" step="1">
+                <assign variable="Posmin" expression="I"/>
+                <for variable="J" start="I+1" end="Tama&#241;o-1" direction="inc" step="1">
+                    <if expression="Vector[J]&lt;Vector[Posmin]">
+                        <then>
+                            <assign variable="Posmin" expression="J"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <assign variable="Temp" expression="Vector[I]"/>
+                <assign variable="Vector[I]" expression="Vector[Posmin]"/>
+                <assign variable="Vector[Posmin]" expression="Temp"/>
+            </for>
+            <for variable="I" start="0" end="Tama&#241;o-1" direction="inc" step="1">
+                <output expression="Vector[I]" newline="True"/>
+            </for>
+        </body>
+    </function>
+    <function name="CrearVector" type="None" variable="">
+        <parameters>
+            <parameter name="Vector" type="Integer" array="True"/>
+            <parameter name="Tama&#241;o" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="I" type="Integer" array="False" size=""/>
+            <for variable="I" start="0" end="Tama&#241;o-1" direction="inc" step="1">
+                <input variable="Vector[I]"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

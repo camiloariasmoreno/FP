@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ordenamiento Quicksort"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-04 05:58:07 p.&#160;m."/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLVRIM0QySDc7MjAyNi0wNi0wNDswNTowODowNCBwLsKgbS47MzA0Nw=="/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLVRIM0QySDc7MjAyNi0wNi0wNDswNTozMToyMCBwLsKgbS47MjtVc2VyO0RFU0tUT1AtVEgzRDJINzsyMDI2LTA2LTA0OzEyOjU1OjQxIHAuwqBtLjtPcmRlbmFtaWVudG8gQnVyYnVqYS5mcHJnOzg3OTM="/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLVRIM0QySDc7MjAyNi0wNi0wNDswNTo1ODowNyBwLsKgbS47MjszMTY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Tama&#241;o, K" type="Integer" array="False" size=""/>
+            <input variable="Tama&#241;o"/>
+            <declare name="Vector" type="Integer" array="True" size="Tama&#241;o"/>
+            <call expression="CrearVector(Vector, Tama&#241;o)"/>
+            <call expression="OrdenarQuicksort(Vector, 0, Tama&#241;o-1)"/>
+            <for variable="K" start="0" end="Tama&#241;o-1" direction="inc" step="1">
+                <output expression="Vector[K]" newline="True"/>
+            </for>
+        </body>
+    </function>
+    <function name="CrearVector" type="None" variable="">
+        <parameters>
+            <parameter name="Vector" type="Integer" array="True"/>
+            <parameter name="Tama&#241;o" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="I" type="Integer" array="False" size=""/>
+            <for variable="I" start="0" end="Tama&#241;o-1" direction="inc" step="1">
+                <input variable="Vector[I]"/>
+            </for>
+        </body>
+    </function>
+    <function name="OrdenarQuicksort" type="None" variable="">
+        <parameters>
+            <parameter name="Vector" type="Integer" array="True"/>
+            <parameter name="Izq" type="Integer" array="False"/>
+            <parameter name="Der" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="I, J, Temp, Pivote" type="Integer" array="False" size=""/>
+            <if expression="Izq&lt;Der">
+                <then>
+                    <assign variable="Pivote" expression="Vector[(Izq+Der)/2]"/>
+                    <assign variable="I" expression="Izq"/>
+                    <assign variable="J" expression="Der"/>
+                    <while expression="I&lt;=J">
+                        <while expression="Vector[I]&lt;Pivote">
+                            <assign variable="I" expression="I+1"/>
+                        </while>
+                        <while expression="Vector[J]&gt;Pivote">
+                            <assign variable="J" expression="J-1"/>
+                        </while>
+                        <if expression="I&lt;=J">
+                            <then>
+                                <assign variable="Temp" expression="Vector[I]"/>
+                                <assign variable="Vector[I]" expression="Vector[J]"/>
+                                <assign variable="Vector[J]" expression="Temp"/>
+                                <assign variable="I" expression="I+1"/>
+                                <assign variable="J" expression="J-1"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </while>
+                    <call expression="OrdenarQuicksort(Vector, Izq, J)"/>
+                    <call expression="OrdenarQuicksort(Vector, I, Der)"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
