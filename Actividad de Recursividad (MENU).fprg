@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Actividad de Recursividad (MENU)"/>
+        <attribute name="authors" value="Camilo Arias"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-07-02 09:08:16 p.&#8239;m."/>
+        <attribute name="created" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA2LTI1OzA2OjQ5OjM0IHAu4oCvbS47MTE5MDk="/>
+        <attribute name="edited" value="Q2FtaWxvIEFyaWFzO0xBUFRPUC1TUVIzUktTMjsyMDI2LTA3LTAyOzA5OjA4OjE2IHAu4oCvbS47MzsxMjAxMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="Menu()"/>
+        </body>
+    </function>
+    <function name="Arbol" type="None" variable="">
+        <parameters>
+            <parameter name="Longitud" type="Integer" array="False"/>
+            <parameter name="Nivel" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <if expression="Nivel&gt;0">
+                <then>
+                    <forward expression="Longitud" pen="down"/>
+                    <turn expression="30" rotate="left"/>
+                    <call expression="Arbol (Longitud*0.7,Nivel-1)"/>
+                    <turn expression="30" rotate="right"/>
+                    <call expression="Arbol (Longitud*0.7,Nivel-1)"/>
+                    <turn expression="30" rotate="right"/>
+                    <call expression="Arbol (Longitud*0.7,Nivel-1)"/>
+                    <turn expression="30" rotate="left"/>
+                    <forward expression="-Longitud" pen="down"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+    <function name="cuadradoserpinski" type="None" variable="">
+        <parameters>
+            <parameter name="longitud" type="Integer" array="False"/>
+            <parameter name="Nivel" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <if expression="Nivel&gt;0">
+                <then>
+                    <for variable="i" start="1" end="4" direction="inc" step="1">
+                        <forward expression="Longitud" pen="down"/>
+                        <turn expression="90" rotate="right"/>
+                        <call expression="cuadradoserpinski(Longitud/3,Nivel-1)"/>
+                    </for>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+    <function name="Factorial" type="Integer" variable="Multiplicacion">
+        <parameters>
+            <parameter name="Numero" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Multiplicacion" type="Integer" array="False" size=""/>
+            <if expression="Numero==1">
+                <then>
+                    <assign variable="Multiplicacion" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="Multiplicacion" expression="Numero*Factorial(Numero-1)"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Fibonacci" type="Integer" variable="Suma">
+        <parameters>
+            <parameter name="Numero" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Suma" type="Integer" array="False" size=""/>
+            <if expression="Numero==0">
+                <then>
+                    <assign variable="Suma" expression="0"/>
+                </then>
+                <else>
+                    <if expression="Numero==1">
+                        <then>
+                            <assign variable="Suma" expression="1"/>
+                        </then>
+                        <else>
+                            <assign variable="Suma" expression="Fibonacci(Numero-1)+Fibonacci(Numero-2)"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Menu" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Opcion, i, numero, Nivel, Longitud" type="Integer" array="False" size=""/>
+            <declare name="continuar" type="Boolean" array="False" size=""/>
+            <assign variable="Continuar" expression="true"/>
+            <while expression="Continuar">
+                <output expression="&quot;====MENU RECURSIVIDAD====&quot;" newline="True"/>
+                <output expression="&quot;1 SUMAR HASTA N NUMEROS&quot;" newline="True"/>
+                <output expression="&quot;2 FACTORIAL&quot;" newline="True"/>
+                <output expression="&quot;3 FIBONACCI&quot;" newline="True"/>
+                <output expression="&quot;4 ARBOL&quot;" newline="True"/>
+                <output expression="&quot;5 TRIANGULO&quot;" newline="True"/>
+                <output expression="&quot;6 ALFOMBRA DE SIERPINSKI&quot;" newline="True"/>
+                <output expression="&quot;9. SALIR&quot;" newline="True"/>
+                <input variable="Opcion"/>
+                <if expression="Opcion==9">
+                    <then>
+                        <assign variable="continuar" expression="false"/>
+                    </then>
+                    <else>
+                        <if expression="Opcion==1">
+                            <then>
+                                <output expression="&quot;DIGITE EL VALOR DEL NUMERO: &quot;" newline="False"/>
+                                <input variable="numero"/>
+                                <output expression="&quot;LA SUMA DE 1 HASTA &quot; &amp; Numero &amp; &quot; es: &quot; &amp; sumaNNumeros(Numero)" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="Opcion==2">
+                                    <then>
+                                        <output expression="&quot;DIGITE EL VALOR DEL NUMERO: &quot;" newline="False"/>
+                                        <input variable="numero"/>
+                                        <output expression="&quot;LA MULTIPLICACION DE 1 HASTA &quot; &amp; Numero &amp; &quot; es: &quot; &amp; Factorial(Numero)" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="Opcion==3">
+                                            <then>
+                                                <output expression="&quot;DIGITE EL VALOR DEL NUMERO: &quot;" newline="False"/>
+                                                <input variable="numero"/>
+                                                <for variable="i" start="1" end="Numero" direction="inc" step="1">
+                                                    <output expression="Fibonacci(i) &amp; &quot; - &quot;" newline="False"/>
+                                                </for>
+                                                <output expression="&quot;&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="Opcion==4">
+                                                    <then>
+                                                        <output expression="&quot;DIGITE EL VALOR PARA LOS DIFENTES NIVELES DEL ARBOL&quot;" newline="True"/>
+                                                        <input variable="Nivel"/>
+                                                        <output expression="&quot;DIGITE EL VALOR PARA LA LONGITUD DE LA RAMA&quot;" newline="True"/>
+                                                        <input variable="Longitud"/>
+                                                        <call expression="Arbol(Longitud,Nivel)"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="Opcion==5">
+                                                            <then>
+                                                                <output expression="&quot;DIGITE EL VALOR DEL NIEVL&quot;" newline="True"/>
+                                                                <input variable="Nivel"/>
+                                                                <output expression="&quot;DIGITE EL VALOR PARA LA LONGITUD DEL TRIANGULO&quot;" newline="True"/>
+                                                                <input variable="Longitud"/>
+                                                                <turn expression="30" rotate="right"/>
+                                                                <call expression="triangulosierpinski(Longitud,Nivel)"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="Opcion==6">
+                                                                    <then>
+                                                                        <output expression="&quot;DIGITE EL VALOR DEL NIEVL&quot;" newline="True"/>
+                                                                        <input variable="Nivel"/>
+                                                                        <output expression="&quot;DIGITE EL VALOR PARA LA LONGITUD DEL CUADRADO&quot;" newline="True"/>
+                                                                        <input variable="Longitud"/>
+                                                                        <call expression="cuadradoserpinski(Longitud,Nivel)"/>
+                                                                    </then>
+                                                                    <else/>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+    <function name="SumaNNumeros" type="Integer" variable="Suma">
+        <parameters>
+            <parameter name="Numero" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Suma" type="Integer" array="False" size=""/>
+            <if expression="numero==1">
+                <then>
+                    <assign variable="Suma" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="Suma" expression="numero+SumaNNumeros(Numero-1)"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="triangulosierpinski" type="None" variable="">
+        <parameters>
+            <parameter name="Longitud" type="Integer" array="False"/>
+            <parameter name="Nivel" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <if expression="Nivel&gt;0">
+                <then>
+                    <for variable="i" start="1" end="3" direction="inc" step="1">
+                        <forward expression="Longitud" pen="down"/>
+                        <turn expression="120" rotate="right"/>
+                        <call expression="triangulosierpinski(Longitud/2,Nivel-1)"/>
+                    </for>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
